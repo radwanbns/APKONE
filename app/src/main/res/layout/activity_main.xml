@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MyVPN Config"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Protocol:" />
+
+        <Spinner
+            android:id="@+id/spinnerProtocol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etServer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Server IP / Host"
+            android:text="127.0.0.1"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Port"
+            android:inputType="number"
+            android:text="443"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPayload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payload (e.g. GET / HTTP/1.1[crlf]Host: ...)"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etSni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SNI / Host"
+            android:text="example.com"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnToggleVpn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="START VPN"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnImportConfig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Import Config" />
+
+            <Button
+                android:id="@+id/btnExportConfig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Export Config" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
